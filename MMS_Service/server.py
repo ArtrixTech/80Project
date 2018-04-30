@@ -18,7 +18,7 @@ def hello_world(template, phone, content):
     except:
         return "Request Syntax ERROR"
 
-    url = str(url).replace(".com", "-com").replace(".cn", "-cn")
+    url = str(url).replace(".", "·")
 
     params = "{\"url_loc\":\"" + url + "\",\"content\":\"" + content + "\"}"
     res = send_sms(__business_id, phone, "Artrix雅智科技", template, params)
